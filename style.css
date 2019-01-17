@@ -16,6 +16,10 @@ h1 {
   width: 100%;
   overflow: hidden;
   background-image: url(img/skyscraper-3094696_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* backface-visibility: inherit; */
   /* background-attachment: transparent; */
 }
 .header img {
@@ -34,7 +38,7 @@ h1 {
   left: 60px;
   z-index: 1;
   color: rgb(255, 255, 255);
-  font-size: 7vw;
+  font-size: 50px;
   font-family: "Old Standard TT", serif;
 }
 @media only screen and (max-width: 1024px) {
@@ -213,10 +217,10 @@ h1 {
 }
 .aboutText {
   left: -100%;
-  width: 40%;
+  width: 45%;
   text-align: justify;
   font-family: "Old Standard TT", serif;
-  font-size: 1vw;
+  font-size: 20px;
 }
 @media only screen and (max-width: 1024px) {
   .aboutText {
@@ -224,10 +228,16 @@ h1 {
     width: 100%;
   }
 }
+@media only screen and (max-width: 1440px) {
+  .aboutText {
+    font-size: 22px;
+    width: 100%;
+  }
+}
 
 .aboutImage {
   left: 150%;
-  width: 50%;
+  width: 45%;
   height: 30vw;
 }
 @media only screen and (max-width: 1024px) {
@@ -235,6 +245,13 @@ h1 {
     left: 150%;
     width: 100%;
     height: 60vw;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .aboutImage {
+    width: 100%;
+    height: 50vw;
+    margin-top: 50px;
   }
 }
 .aboutActive {
@@ -284,17 +301,18 @@ h1 {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  font-size: 7vw;
+  font-size: 40px;
   font-family: "Old Standard TT", serif;
   font-weight: bold;
 }
 .staticText {
+  text-align: center;
   position: absolute;
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 25px;
 }
 
 .oferts {
@@ -570,6 +588,7 @@ h3 {
 @media only screen and (max-width: 1024px) {
   .bubble img {
     right: 40px;
+    height: 50%;
   }
 }
 .contacts {
