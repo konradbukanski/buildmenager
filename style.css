@@ -652,3 +652,60 @@ h3 {
 .footer span {
   font-size: 15px;
 }
+.phone {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+.fa-phone {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: black;
+  /* transition: 5s; */
+  animation: phone 6s infinite linear;
+}
+@keyframes phone {
+  88% {
+    transform: translate(-55%, -50%);
+  }
+  89% {
+    transform: translate(-55%, -50%);
+  }
+  90% {
+    transform: translate(-45%, -50%);
+  }
+  91% {
+    transform: translate(-45%, -50%);
+  }
+  92% {
+    transform: translate(-55%, -50%);
+  }
+  93% {
+    transform: translate(-55%, -50%);
+  }
+  94% {
+    transform: translate(-45%, -50%);
+  }
+  95% {
+    transform: translate(-45%, -50%);
+  }
+  96% {
+    transform: translate(-55%, -50%);
+  }
+  97% {
+    transform: translate(-55%, -50%);
+  }
+  98% {
+    transform: translate(-45%, -50%);
+  }
+  99% {
+    transform: translate(-45%, -50%);
+  }
+}
