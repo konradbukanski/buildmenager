@@ -218,7 +218,7 @@ h1 {
 .aboutText {
   left: -100%;
   width: 45%;
-  text-align: justify;
+  text-align: left;
   font-family: "Old Standard TT", serif;
   font-size: 20px;
 }
@@ -660,6 +660,20 @@ h3 {
   height: 60px;
   background-color: white;
   border-radius: 50%;
+}
+.phone a {
+  display: none;
+  position: absolute;
+  width: 130px;
+  left: -130px;
+  line-height: 50px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+.phone:hover > a {
+  display: block;
 }
 .fa-phone {
   position: absolute;
