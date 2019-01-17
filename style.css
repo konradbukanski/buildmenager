@@ -234,7 +234,10 @@ h1 {
     width: 100%;
   }
 }
-
+.aboutText h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
 .aboutImage {
   left: 150%;
   width: 45%;
@@ -544,6 +547,8 @@ h3 {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
   /* border: #f1f1f1 solid 4px; */
   -webkit-box-shadow: -2px 1px 31px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 1px 31px -8px rgba(0, 0, 0, 0.75);
@@ -587,8 +592,8 @@ h3 {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30%;
-  height: 60%;
+  width: 20%;
+  /* height: 60%; */
   transform: translate(50%, 50%);
   border-radius: 50%;
   overflow: hidden;
@@ -597,7 +602,7 @@ h3 {
 @media only screen and (max-width: 1024px) {
   .bubble img {
     right: 40px;
-    height: 50%;
+    /* height: 50%; */
   }
 }
 .contacts {
@@ -652,28 +657,16 @@ h3 {
 .footer span {
   font-size: 15px;
 }
-.phone {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border-radius: 50%;
-}
-.phone a {
-  display: none;
-  position: absolute;
-  width: 130px;
-  left: -130px;
-  line-height: 50px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  background-color: white;
-}
-.phone:hover > a {
-  display: block;
+@media only screen and (max-width: 1024px) {
+  .phone {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+  }
 }
 .fa-phone {
   position: absolute;
