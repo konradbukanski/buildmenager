@@ -17,12 +17,50 @@ document.querySelector(".elements4").addEventListener("click", () => {
 document.querySelector(".upArrow ").addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+let counter = true;
+let year = 0;
+let meter = 0;
+let percent = 0;
+
+const years = () => {
+  document.querySelector(".year").innerHTML = year;
+  year++;
+  const t = setTimeout(years, 100);
+  if (year > 2019 - 2001) {
+    clearTimeout(t);
+  }
+};
+const meters = () => {
+  document.querySelector(".meter").innerHTML = meter;
+  meter++;
+  const m = setTimeout(meters, 40);
+  if (meter > 50) {
+    clearTimeout(m);
+  }
+};
+const percents = () => {
+  document.querySelector(".percent").innerHTML = percent;
+  percent++;
+  const p = setTimeout(percents, 20);
+  if (percent > 100) {
+    clearTimeout(p);
+  }
+};
 
 document.addEventListener("scroll", () => {
   if (scrollY > document.querySelector(".header").offsetTop + 150) {
     document.querySelector(".upArrow").classList.add("upArrow__active");
   } else {
     document.querySelector(".upArrow").classList.remove("upArrow__active");
+  }
+  if (
+    scrollY > document.querySelector(".statistics").offsetTop - 200 &&
+    counter
+  ) {
+    counter = false;
+    years();
+    meters();
+    percents();
   }
 });
 
