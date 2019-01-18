@@ -237,6 +237,7 @@ h1 {
   text-align: left;
   font-family: "Old Standard TT", serif;
   font-size: 20px;
+  text-align: justify;
 }
 @media only screen and (max-width: 1024px) {
   .aboutText p {
@@ -514,6 +515,9 @@ h3 {
   /* box-sizing: border-box; */
   animation: slider 6s infinite linear;
   opacity: 0;
+  -webkit-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
 }
 @media only screen and (max-width: 1024px) {
   .clientsSlider div {
