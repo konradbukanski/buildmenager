@@ -333,7 +333,7 @@ h1 {
 }
 @media only screen and (max-width: 426px) {
   .staticNumeber {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 .staticText {
@@ -716,16 +716,23 @@ h3 {
 }
 .mobile_menu i {
   color: white;
+  z-index: 3;
 }
 .mobile_menu--active {
   top: 0vh;
 }
 li {
   line-height: 10vh;
+  cursor: pointer;
 }
 ul {
+  width: 100%;
   margin: 0;
+  margin-left: -40px;
   list-style-type: none;
+}
+li:hover {
+  background-color: #1328885d;
 }
 .menagment,
 .consultancy,
