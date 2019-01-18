@@ -68,11 +68,18 @@ h1 {
     display: none;
   }
 }
+.hamburger {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+}
 .hamburger div {
   display: none;
   position: absolute;
-  top: 20px;
-  right: 20px;
   width: 35px;
   height: 5px;
   background-color: rgb(255, 255, 255);
@@ -80,11 +87,11 @@ h1 {
 }
 .hamburger div:nth-child(1) {
   position: absolute;
-  top: 30px;
+  top: 10px;
 }
 .hamburger div:nth-child(2) {
   position: absolute;
-  top: 40px;
+  top: 20px;
 }
 @media only screen and (max-width: 1024px) {
   .hamburger div {
@@ -176,6 +183,11 @@ h1 {
   height: 64px;
   transition: 0.2s;
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1024px) {
+  .arrow {
+    bottom: 0px;
+  }
 }
 
 .fa-angle-down {
@@ -701,6 +713,9 @@ h3 {
   color: white;
   font-size: 20px;
   z-index: 2;
+}
+.mobile_menu i {
+  color: white;
 }
 .mobile_menu--active {
   top: 0vh;

@@ -54,3 +54,46 @@ document
       .querySelector(".consultancy")
       .classList.remove("menagment__active");
   });
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".mobile_menu").classList.add("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "none";
+  console.log("click");
+});
+document
+  .querySelector(".mobile_menu .fa-times")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".mobile_menu")
+      .classList.remove("mobile_menu--active");
+    document.querySelector(".hamburger").style.display = "block";
+  });
+
+document.querySelector(".elements5").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".about").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements6").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".oferts").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements7").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".clients").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements8").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".contacts").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
