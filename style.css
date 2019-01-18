@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -45,6 +48,7 @@ h1 {
   .logo {
     font-size: 4vh;
     left: 20px;
+    top: 20px;
   }
 }
 .menu {
@@ -67,8 +71,8 @@ h1 {
 .hamburger div {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   width: 35px;
   height: 5px;
   background-color: rgb(255, 255, 255);
@@ -76,11 +80,11 @@ h1 {
 }
 .hamburger div:nth-child(1) {
   position: absolute;
-  top: 70px;
+  top: 30px;
 }
 .hamburger div:nth-child(2) {
   position: absolute;
-  top: 80px;
+  top: 40px;
 }
 @media only screen and (max-width: 1024px) {
   .hamburger div {
@@ -312,6 +316,11 @@ h1 {
 }
 @media only screen and (max-width: 1024px) {
   .staticNumeber {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .staticNumeber {
     font-size: 15px;
   }
 }
@@ -326,7 +335,12 @@ h1 {
 }
 @media only screen and (max-width: 1024px) {
   .staticText {
-    font-size: 10px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .staticText {
+    font-size: 9px;
   }
 }
 .oferts {
@@ -386,7 +400,7 @@ h1 {
   color: #1f2e53;
 }
 
-.option a {
+.option button {
   padding: 5px;
   border: 3px solid #1f2e53;
   transform: translateX(-50%);
@@ -446,7 +460,7 @@ h3 {
   box-sizing: border-box;
   color: white;
   transform: rotate(-1deg);
-  min-height: 700px;
+  min-height: 300px;
   z-index: 1;
   /* -webkit-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
@@ -473,39 +487,48 @@ h3 {
   transform: rotate(1deg);
 }
 .clientsSlider div {
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 20%;
+  width: 60%;
+  height: 600px;
+  background-image: url(img/office-building-2297869_1920.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-around;
   margin-top: 80px;
+  margin-bottom: 80px;
   /* box-sizing: border-box; */
+  animation: slider 6s infinite linear;
+  opacity: 0;
 }
 @media only screen and (max-width: 1024px) {
   .clientsSlider div {
     flex-direction: column;
     margin-left: 0%;
-    width: 90%;
+    width: 100%;
+    height: 400px;
   }
 }
 
-.clientsSlider img {
+/* .clientsSlider img {
   position: relative;
   width: 38%;
   height: 28%;
-  margin: 20px;
-  /* border: 2px solid white; */
-  border-radius: 5px;
+  margin: 20px; */
+/* border: 2px solid white; */
+/* border-radius: 5px;
   -webkit-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 1px 31px -4px rgba(0, 0, 0, 0.75);
-}
-@media only screen and (max-width: 1024px) {
+} */
+/* @media only screen and (max-width: 1024px) {
   .clientsSlider img {
     width: 100%;
     height: 28%;
   }
-}
+} */
 /* @media only screen and (max-width: 1024px) {
   .clientsSlider img:nth-child(1) {
     display: none;
@@ -559,6 +582,17 @@ h3 {
     width: 100%;
     margin-bottom: 100px;
     height: 200px;
+    font-size: 20px;
+  }
+}
+.bubble p {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
+@media only screen and (max-width: 1024px) {
+  .bubble p {
+    right: 20%;
   }
 }
 /* .bubble:after {
@@ -652,13 +686,81 @@ h3 {
   display: flex;
   justify-content: space-around;
   /* line-height: 140px; */
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .footer span {
   font-size: 15px;
 }
+.mobile_menu {
+  position: fixed;
+  top: -40vh;
+  left: 0;
+  text-align: center;
+  background-color: rgb(53, 53, 53);
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  z-index: 2;
+}
+.mobile_menu--active {
+  top: 0vh;
+}
+li {
+  line-height: 10vh;
+}
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+.menagment,
+.consultancy,
+.administracion {
+  text-align: center;
+  display: none;
+  position: fixed;
+  width: 0vw;
+  height: 0vh;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  transition: 1s linear;
+}
+.menagment__active {
+  display: block;
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+  top: 5vh;
+  left: 5vw;
+  animation: menagment 0.3s;
+}
+@keyframes menagment {
+  0% {
+    width: 0vw;
+    height: 0vh;
+    top: 50%;
+    left: 50%;
+  }
+  20% {
+    width: 20vw;
+    height: 20vh;
+  }
+}
+.fa-times {
+  position: absolute;
+  color: black;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.phone {
+  display: none;
+}
 @media only screen and (max-width: 1024px) {
   .phone {
+    display: block;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -668,15 +770,40 @@ h3 {
     border-radius: 50%;
   }
 }
-.fa-phone {
+@media only screen and (max-width: 1024px) {
+  .fa-phone {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: black;
+    /* transition: 5s; */
+    animation: phone 6s infinite linear;
+  }
+}
+.upArrow {
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  left: -60px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(48, 101, 180);
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.upArrow__active {
+  left: 30px;
+}
+.fa-arrow-up {
+  font-size: 30px;
+  color: white;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: black;
-  /* transition: 5s; */
-  animation: phone 6s infinite linear;
 }
 @keyframes phone {
   88% {
@@ -714,5 +841,19 @@ h3 {
   }
   99% {
     transform: translate(-45%, -50%);
+  }
+}
+@keyframes slider {
+  5% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
 }

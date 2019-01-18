@@ -1,44 +1,49 @@
-const headerText = document.querySelector(".headerText p");
+class HeaderSlider {
+  constructor(i, element, table) {
+    this.element = document.querySelector(element);
+    this.table = table;
+    this.i = i;
+  }
 
-const headerTextList = [
+  changeTextHeader() {
+    this.element.innerHTML = this.table[this.i];
+    this.i++;
+    if (this.i === this.table.length) {
+      this.i = 0;
+    }
+  }
+  changeImage() {
+    this.element.style.backgroundImage = `url(${this.table[this.i]})`;
+    this.i++;
+    if (this.i === this.table.length) {
+      this.i = 0;
+    }
+  }
+}
+
+const kwadrat = new HeaderSlider(1, ".headerText p", [
   "Zarządzanie to dla nas przyjemność",
   "staniemy przed każdym wyzwaniem",
   "twój zaufany partner",
   "bezpieczeństwo i zaufanie"
-];
-let i = 0;
-let j = 0;
-function changeTextHeader() {
-  headerText.innerHTML = headerTextList[i];
-  i++;
-  if (i === headerTextList.length) {
-    i = 0;
-  }
-  setTimeout(changeTextHeader, 7000);
-}
+]);
 
-changeTextHeader();
+(function slider() {
+  setTimeout(function() {
+    kwadrat.changeTextHeader();
+    slider();
+  }, 7000);
+})();
 
-const staticNumeber = document.querySelector(".staticNumeber span");
-
-function handleStaticNumeber() {
-  staticNumeber.innerHTML = j;
-  j++;
-
-  if (j === 18) {
-    clearTimeout(yars);
-  }
-}
-
-// for (k = 0; k < 19; k++) {
-
-// }
-window.addEventListener("scroll", () => {
-  if (scrollY > 2300) {
-    const yars = setTimeout(handleStaticNumeber, 70);
-  }
-});
-
-class Scrolling {
-  constructor() {}
-}
+const pros = new HeaderSlider(1, ".clientsSlider div", [
+  "img/architecture-768432_1920.jpg",
+  "img/moscow-city-1573549_1920.jpg",
+  "img/office-building-2297869_1920.jpg",
+  "img/skyscraper-3094696_1920.jpg"
+]);
+(function slider2() {
+  setTimeout(function() {
+    pros.changeImage();
+    slider2();
+  }, 6000);
+})();
