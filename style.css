@@ -103,7 +103,7 @@ h1 {
   text-decoration: none;
   color: white;
   margin: 0 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   overflow: hidden;
   font-size: 20px;
   font-family: "Old Standard TT", serif;
@@ -373,56 +373,43 @@ h1 {
   }
 }
 .ofert {
-  /* height: 800px; */
-  width: 100%;
-  display: flex;
-  /* justify-content: space-around;   */
-  overflow: hidden;
+  margin-top: 100px;
 }
-@media only screen and (max-width: 1024px) {
-  .ofert {
-    flex-direction: column;
-  }
+.ofert h2 {
+  color: #1f2e53;
+  /* border-top: 2px solid #1f2e53; */
+  border-bottom: 2px solid #1f2e53;
+}
+.ofert i {
+  font-size: 40px;
+  padding: 15px;
+}
+.ofert p {
+  text-align: justify;
+  font-size: 20px;
 }
 .option {
-  width: calc(100% / 3 - 10% - 4px);
-  height: 100%;
-  margin: 5%;
-  border-radius: 8px;
-  background-color: #ffffff;
-  flex-shrink: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  -webkit-box-shadow: -2px 1px 31px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px 1px 31px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: -2px 1px 31px -8px rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  position: relative;
+  width: 96%;
+  /* text-transform: uppercase; */
+  /* height: 400px; */
+  box-sizing: content-box;
+  margin: 10px 2%;
+  border-radius: 5px;
+  background-color: rgba(192, 192, 192, 0.24);
+  padding: 15px;
+  box-sizing: border-box;
+  /* text-align: center; */
+  color: #000;
+  /* -webkit-box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75); */
 }
 @media only screen and (max-width: 1024px) {
   .option {
     width: calc(100% - 10% - 4px);
   }
-}
-.option i {
-  font-size: 80px;
-  color: #1f2e53;
-}
-.option p i {
-  font-size: 25px;
-  color: #1f2e53;
-}
-
-.option button {
-  padding: 5px;
-  border: 3px solid #1f2e53;
-  transform: translateX(-50%);
-  width: 60%;
-  margin: 20px 50%;
-  text-decoration: none;
-  color: #1f2e53;
-  font-weight: bold;
-  border-radius: 5px;
 }
 
 .active {
@@ -454,10 +441,10 @@ h2 {
 h3 {
   font-size: 22px;
   margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
+  /* margin-bottom: 20px; */
+  padding: 10px 0;
   /* font-weight: 100; */
-  color: #ca8484;
+  /* color: #ca8484; */
 }
 .clients h1 {
   color: white;
