@@ -5,12 +5,27 @@ document.querySelector(".elements1").addEventListener("click", () => {
   scrollTo(0, document.querySelector(".about").offsetTop);
 });
 document.querySelector(".elements2").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".oferts").offsetTop);
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_menagment").offsetTop
+  );
 });
 document.querySelector(".elements3").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".clients").offsetTop);
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_administracion").offsetTop
+  );
 });
 document.querySelector(".elements4").addEventListener("click", () => {
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_consultancy").offsetTop
+  );
+});
+document.querySelector(".elements5").addEventListener("click", () => {
   scrollTo(0, document.querySelector(".contacts").offsetTop);
 });
 
@@ -33,8 +48,8 @@ const years = () => {
 const meters = () => {
   document.querySelector(".meter").innerHTML = meter;
   meter++;
-  const m = setTimeout(meters, 40);
-  if (meter > 50) {
+  const m = setTimeout(meters, 90);
+  if (meter > 20) {
     clearTimeout(m);
   }
 };

@@ -395,13 +395,16 @@ h1 {
   /* text-transform: uppercase; */
   /* height: 400px; */
   box-sizing: content-box;
-  margin: 10px 2%;
+  margin-top: 10px;
+  margin-left: 100vw;
   border-radius: 5px;
   background-color: rgba(192, 192, 192, 0.24);
   padding: 15px;
   box-sizing: border-box;
+  opacity: 0;
   /* text-align: center; */
   color: #000;
+  transition: 0.8s;
   /* -webkit-box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 0px 22px -15px rgba(0, 0, 0, 0.75); */
@@ -411,7 +414,10 @@ h1 {
     width: calc(100% - 10% - 4px);
   }
 }
-
+.active_option {
+  margin-left: 2%;
+  opacity: 1;
+}
 .active {
   display: flex;
 }
@@ -693,6 +699,10 @@ h3 {
 }
 .footer span {
   font-size: 15px;
+}
+.footer span a {
+  text-decoration: none;
+  color: #000;
 }
 .mobile_menu {
   position: fixed;
