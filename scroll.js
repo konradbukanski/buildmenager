@@ -79,39 +79,39 @@ document.addEventListener("scroll", () => {
   }
 });
 
-document.querySelector(".menagment__btn").addEventListener("click", () => {
-  document.querySelector(".menagment").classList.add("menagment__active");
-});
-document.querySelector(".menagment .fa-times").addEventListener("click", () => {
-  document.querySelector(".menagment").classList.remove("menagment__active");
-});
+// document.querySelector(".menagment__btn").addEventListener("click", () => {
+//   document.querySelector(".menagment").classList.add("menagment__active");
+// });
+// document.querySelector(".menagment .fa-times").addEventListener("click", () => {
+//   document.querySelector(".menagment").classList.remove("menagment__active");
+// });
 
-document.querySelector(".administracion__btn").addEventListener("click", () => {
-  document.querySelector(".administracion").classList.add("menagment__active");
-});
-document
-  .querySelector(".administracion .fa-times")
-  .addEventListener("click", () => {
-    document
-      .querySelector(".administracion")
-      .classList.remove("menagment__active");
-  });
+// document.querySelector(".administracion__btn").addEventListener("click", () => {
+//   document.querySelector(".administracion").classList.add("menagment__active");
+// });
+// document
+//   .querySelector(".administracion .fa-times")
+//   .addEventListener("click", () => {
+//     document
+//       .querySelector(".administracion")
+//       .classList.remove("menagment__active");
+//   });
 
-document.querySelector(".consultancy__btn").addEventListener("click", () => {
-  document.querySelector(".consultancy").classList.add("menagment__active");
-});
-document
-  .querySelector(".consultancy .fa-times")
-  .addEventListener("click", () => {
-    document
-      .querySelector(".consultancy")
-      .classList.remove("menagment__active");
-  });
+// document.querySelector(".consultancy__btn").addEventListener("click", () => {
+//   document.querySelector(".consultancy").classList.add("menagment__active");
+// });
+// document
+//   .querySelector(".consultancy .fa-times")
+//   .addEventListener("click", () => {
+//     document
+//       .querySelector(".consultancy")
+//       .classList.remove("menagment__active");
+//   });
 
 document.querySelector(".hamburger").addEventListener("click", () => {
+  console.log("click");
   document.querySelector(".mobile_menu").classList.add("mobile_menu--active");
   document.querySelector(".hamburger").style.display = "none";
-  console.log("click");
 });
 document
   .querySelector(".mobile_menu .fa-times")
