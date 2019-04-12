@@ -33,3 +33,8 @@ document.addEventListener("scroll", () => {
     });
   }
 });
+document.querySelector(".hamburger").addEventListener("click", () => {
+  console.log("click");
+  document.querySelector(".mobile_menu").classList.add("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "none";
+});

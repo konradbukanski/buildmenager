@@ -664,7 +664,7 @@ h3 {
   position: relative;
   box-sizing: content-box;
   text-align: center;
-  width: 30%;
+  width: 100%;
   background-color: #1f2e53;
   color: white;
   font-size: 4vw;
@@ -674,7 +674,7 @@ h3 {
 @media only screen and (max-width: 1024px) {
   .contactsLogo i {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translateY(50%) rotate(-90deg);
     font-size: 35px;
@@ -706,7 +706,7 @@ h3 {
 }
 .mobile_menu {
   position: fixed;
-  top: -40vh;
+  top: -60vh;
   left: 0;
   text-align: center;
   background-color: rgb(53, 53, 53);
@@ -731,6 +731,7 @@ ul {
   margin: 0;
   margin-left: -40px;
   list-style-type: none;
+  text-transform: uppercase;
 }
 li:hover {
   background-color: #1328885d;

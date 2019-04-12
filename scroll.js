@@ -1,3 +1,6 @@
+let Xmas = new Date();
+let actualYear = Xmas.getFullYear(); // zwraca 95
+
 document.querySelector(".arrow").addEventListener("click", () => {
   scrollTo(0, document.querySelector(".about").offsetTop);
 });
@@ -28,7 +31,53 @@ document.querySelector(".elements4").addEventListener("click", () => {
 document.querySelector(".elements5").addEventListener("click", () => {
   scrollTo(0, document.querySelector(".contacts").offsetTop);
 });
-
+document.querySelector(".elements6").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".about").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements7").addEventListener("click", () => {
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_menagment").offsetTop
+  );
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements8").addEventListener("click", () => {
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_administracion").offsetTop
+  );
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements9").addEventListener("click", () => {
+  scrollTo(
+    0,
+    document.querySelector(".oferts").offsetTop +
+      document.querySelector(".ofert_consultancy").offsetTop
+  );
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
+document.querySelector(".elements10").addEventListener("click", () => {
+  scrollTo(0, document.querySelector(".contacts").offsetTop);
+  document
+    .querySelector(".mobile_menu")
+    .classList.remove("mobile_menu--active");
+  document.querySelector(".hamburger").style.display = "block";
+});
 document.querySelector(".upArrow ").addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
@@ -41,7 +90,7 @@ const years = () => {
   document.querySelector(".year").innerHTML = year;
   year++;
   const t = setTimeout(years, 100);
-  if (year > 2019 - 2001) {
+  if (year > actualYear - 2001) {
     clearTimeout(t);
   }
 };
@@ -69,7 +118,7 @@ document.addEventListener("scroll", () => {
     document.querySelector(".upArrow").classList.remove("upArrow__active");
   }
   if (
-    scrollY > document.querySelector(".statistics").offsetTop - 200 &&
+    scrollY > document.querySelector(".statistics").offsetTop / 2 &&
     counter
   ) {
     counter = false;
@@ -122,31 +171,31 @@ document
     document.querySelector(".hamburger").style.display = "block";
   });
 
-document.querySelector(".elements5").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".about").offsetTop);
-  document
-    .querySelector(".mobile_menu")
-    .classList.remove("mobile_menu--active");
-  document.querySelector(".hamburger").style.display = "block";
-});
-document.querySelector(".elements6").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".oferts").offsetTop);
-  document
-    .querySelector(".mobile_menu")
-    .classList.remove("mobile_menu--active");
-  document.querySelector(".hamburger").style.display = "block";
-});
-document.querySelector(".elements7").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".clients").offsetTop);
-  document
-    .querySelector(".mobile_menu")
-    .classList.remove("mobile_menu--active");
-  document.querySelector(".hamburger").style.display = "block";
-});
-document.querySelector(".elements8").addEventListener("click", () => {
-  scrollTo(0, document.querySelector(".contacts").offsetTop);
-  document
-    .querySelector(".mobile_menu")
-    .classList.remove("mobile_menu--active");
-  document.querySelector(".hamburger").style.display = "block";
-});
+// document.querySelector(".elements5").addEventListener("click", () => {
+//   scrollTo(0, document.querySelector(".about").offsetTop);
+//   document
+//     .querySelector(".mobile_menu")
+//     .classList.remove("mobile_menu--active");
+//   document.querySelector(".hamburger").style.display = "block";
+// });
+// document.querySelector(".elements6").addEventListener("click", () => {
+//   scrollTo(0, document.querySelector(".oferts").offsetTop);
+//   document
+//     .querySelector(".mobile_menu")
+//     .classList.remove("mobile_menu--active");
+//   document.querySelector(".hamburger").style.display = "block";
+// });
+// document.querySelector(".elements7").addEventListener("click", () => {
+//   scrollTo(0, document.querySelector(".clients").offsetTop);
+//   document
+//     .querySelector(".mobile_menu")
+//     .classList.remove("mobile_menu--active");
+//   document.querySelector(".hamburger").style.display = "block";
+// });
+// document.querySelector(".elements8").addEventListener("click", () => {
+//   scrollTo(0, document.querySelector(".contacts").offsetTop);
+//   document
+//     .querySelector(".mobile_menu")
+//     .classList.remove("mobile_menu--active");
+//   document.querySelector(".hamburger").style.display = "block";
+// });
