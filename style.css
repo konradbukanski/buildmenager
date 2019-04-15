@@ -366,6 +366,7 @@ h1 {
   left: 10%;
   width: 80%;
   margin-top: 150px;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 1024px) {
   .oferts {
