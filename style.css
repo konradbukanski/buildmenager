@@ -7,7 +7,6 @@ body {
   font-family: "Old Standard TT", serif;
   overflow-x: hidden;
   background-color: rgba(241, 243, 247, 0.493);
-  position: fixed;
 }
 h1 {
   margin: 0;
