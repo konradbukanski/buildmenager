@@ -312,7 +312,7 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 50%;
   /* background-color: brown; */
   color: rgb(243, 243, 243);
 }
